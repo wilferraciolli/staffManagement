@@ -1,0 +1,43 @@
+<div class="container">
+  <mat-toolbar>
+    <h2>{{'userList.title' | translate}}</h2>
+  </mat-toolbar>
+
+  <div class="user-list">
+    <div class="user-list-search">
+      <mat-form-field floatLabel="never" class="full-width">
+        <input matInput type="text" [(ngModel)]="searchKey" placeholder="Search" autocomplete="off"
+               (keyup)="applyFilter()">
+        <button (click)="onSearchClear()" mat-button matSuffix mat-icon-button aria-label="Clear" *ngIf="searchKey">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+
+    <div class="user-list-search-actions">
+      <button mat-raised-button (click)="create()" [disabled]="!userCreateAccess">
+        <mat-icon>add</mat-icon>
+        <span>{{'userList.add' | translate}}</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- List of users -->
+  <div class="user-list-content">
+
+    <mat-card class="user-list-content-card" *ngFor="let user of users">
+      <div><mat-icon class="material-icons md-48">face</mat-icon></div>
+      <div> {{user.firstName}} {{user.lastName}}</div>
+      <div> {{user.username}}</div>
+      <div> {{user.roleIds | convertIdsToValues: userCollectionRoleIds}}</div>
+      <div class="user-list-content-card-actions">
+        <button mat-icon-button [disabled]="!user.links.updateUser.href" (click)="onEdit(user)">
+          <mat-icon>launch</mat-icon>
+        </button>
+        <button mat-icon-button color="warn" [disabled]="!user.links.deleteUser.href" (click)="delete(user.links.deleteUser.href)">
+          <mat-icon>delete_outline</mat-icon>
+        </button>
+      </div>
+    </mat-card>
+  </div>
+</div>

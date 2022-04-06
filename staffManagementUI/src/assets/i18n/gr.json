@@ -1,0 +1,87 @@
+{
+  "header": {
+    "language": {
+      "english": "EG - Αγγλικά",
+      "greek": "GR - Ελληνικά",
+      "portuguese": "PT - Πορτογαλικά"
+    },
+    "home": "Αρχική σελίδα",
+    "users": "Χρήστες",
+    "people": "Ανθρωποι",
+    "register": "Εγγραφή",
+    "login": "Σύνδεση",
+    "logOut": "Αποσύνδεση"
+  },
+  "home": {
+    "title": "Καλώς ορίσατε"
+  },
+  "form": {
+    "submit": "υποβάλλουν",
+    "update": "Εκσυγχρονίζω",
+    "clear": "Σαφή",
+    "chooseADate": "Επιλέξτε μια ημερομηνία"
+  },
+  "registration": {
+    "title": "Εγγραφή ",
+    "firstName": "Ονομα",
+    "lastName": "Επίθετο",
+    "email": "Email",
+    "password": "Κωδικός πρόσβασης",
+    "dateOfBirth": "Ημερομηνια γεννησης",
+    "login": "Σύνδεση",
+    "register": "ΚΑΝΩ ΕΓΓΡΑΦΗ"
+  },
+  "login": {
+    "title": "Σύνδεση",
+    "email": "Email",
+    "password": "Κωδικός πρόσβασης",
+    "register": "Εγγραφή",
+    "login": "ΣΥΝΔΕΣΗ"
+  },
+  "userProfile": {
+    "title": "Προφίλ χρήστη",
+    "firstName": "Ονομα",
+    "lastName": "Επίθετο",
+    "email": "Email",
+    "dateOfBirth": "Ημερομηνια γεννησης",
+    "gender": "Γένος",
+    "maritalStatus": "οικογενειακή κατάσταση",
+    "numberOfDependants": "Αριθμός Εξαρτωμένων",
+    "phoneNumber": "Αριθμός τηλεφώνου"
+  },
+  "userList": {
+    "title": "Χρήστες",
+    "add": "Δημιουργία χρήστη"
+  },
+  "user": {
+    "form": {
+      "newUser": "Δημιουργία χρήστη",
+      "updateUser": "Τροποποίηση χρήστη"
+    },
+    "firstName": "Ονομα",
+    "lastName": "Επίθετο",
+    "username": "Email",
+    "password": "Κωδικός πρόσβασης",
+    "active": "Ενεργός",
+    "dateOfBirth": "Ημερομηνια γεννησης",
+    "roles": "Ρόλοι",
+    "role": "Ρόλος"
+  },
+  "personList": {
+    "title": "Ανθρωποι",
+    "add": "Δημιουργία χρήστη"
+  },
+  "person": {
+    "form": {
+      "updatePerson": "Ενημέρωση ατόμου"
+    },
+    "firstName": "Ονομα",
+    "lastName": "Επίθετο",
+    "dateOfBirth": "Ημερομηνια γεννησης",
+    "email": "Email",
+    "gender": "Γένος",
+    "maritalStatus": "οικογενειακή κατάσταση",
+    "numberOfDependants": "Αριθμός Εξαρτωμένων",
+    "telephoneNumber": "Αριθμός τηλεφώνου"
+  }
+}
