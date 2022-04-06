@@ -22,11 +22,6 @@ public class PersonResourceAssembler {
     @Autowired
     private PersonLinkProvider linkProvider;
 
-    /**
-     * Convert to entity person.
-     * @param payload the payload
-     * @return the person
-     */
     public Person convertToEntity(final PersonResource payload) {
         return Person.builder()
                 .userId(payload.getUserId())
