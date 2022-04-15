@@ -13,9 +13,10 @@ export class Person {
   maritalStatusId?: string;
   numberOfDependants?: number;
   phoneNumber?: string;
+  allowedSpecialShift?: boolean;
+  allowedOnCall?: boolean;
+  fullyTrained?: boolean;
   links: PersonLinks;
-  meta: PersonMeta;
-
   constructor(id: string,
               userId: string,
               firstName: string,
@@ -26,6 +27,9 @@ export class Person {
               maritalStatusId: string,
               numberOfDependants: number,
               phoneNumber: string,
+              allowedSpecialShift: boolean,
+              allowedOnCall: boolean,
+              fullyTrained: boolean,
               links: PersonLinks,
               meta: PersonMeta) {
 
@@ -39,7 +43,12 @@ export class Person {
     this.maritalStatusId = maritalStatusId;
     this.numberOfDependants = numberOfDependants;
     this.phoneNumber = phoneNumber;
+    this.allowedSpecialShift = allowedSpecialShift;
+    this.allowedOnCall = allowedOnCall;
+    this.fullyTrained = fullyTrained;
     this.links = links;
     this.meta = meta;
   }
+
+  meta: PersonMeta;
 }

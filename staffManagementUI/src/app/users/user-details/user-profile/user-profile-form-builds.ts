@@ -40,6 +40,9 @@ export class UserProfileFormBuilder {
       this.form.controls.maritalStatusId.value,
       this.form.controls.numberOfDependants.value,
       this.form.controls.phoneNumber.value,
+      this.form.controls.allowedSpecialShift.value,
+      this.form.controls.allowedOnCall.value,
+      this.form.controls.fullyTrained.value,
       this.form.controls.links.value,
       this.form.controls.meta.value
     );

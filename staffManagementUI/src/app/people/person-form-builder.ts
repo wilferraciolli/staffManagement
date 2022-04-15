@@ -30,6 +30,9 @@ export class PersonFormBuilder {
       maritalStatusId: [''],
       numberOfDependants: [0],
       phoneNumber: [''],
+      allowedSpecialShift: [''],
+      allowedOnCall: [''],
+      fullyTrained: [''],
       links: [null],
       meta: []
     });
@@ -48,6 +51,9 @@ export class PersonFormBuilder {
       this.form.controls.maritalStatusId.value,
       this.form.controls.numberOfDependants.value,
       this.form.controls.phoneNumber.value,
+      this.form.controls.allowedSpecialShift.value,
+      this.form.controls.allowedOnCall.value,
+      this.form.controls.fullyTrained.value,
       this.form.controls.links.value,
       this.form.controls.meta.value
     );
@@ -75,6 +81,9 @@ export class PersonFormBuilder {
         maritalStatusId: _.isUndefined(person.maritalStatusId) ? '' : person.maritalStatusId,
         numberOfDependants: _.isUndefined(person.numberOfDependants) ? 0 : person.numberOfDependants,
         phoneNumber: _.isUndefined(person.phoneNumber) ? '' : person.phoneNumber,
+        allowedSpecialShift: _.isUndefined(person.allowedSpecialShift) ? '' : person.allowedSpecialShift,
+        allowedOnCall: _.isUndefined(person.allowedOnCall) ? '' : person.allowedOnCall,
+        fullyTrained: _.isUndefined(person.fullyTrained) ? '' : person.fullyTrained,
         links: person.links,
         meta: ''
       }
@@ -97,6 +106,9 @@ export class PersonFormBuilder {
         maritalStatusId: person.maritalStatusId,
         numberOfDependants: person.numberOfDependants,
         phoneNumber: person.phoneNumber,
+        allowedSpecialShift: person.allowedSpecialShift,
+        allowedOnCall: person.allowedOnCall,
+        fullyTrained: person.fullyTrained,
         links: {
           self: person.links.self,
           updatePerson: person.links.updatePerson,
@@ -126,6 +138,9 @@ export class PersonFormBuilder {
         maritalStatusId: '',
         numberOfDependants: 0,
         phoneNumber: '',
+        allowedSpecialShift: '',
+        allowedOnCall: '',
+        fullyTrained: '',
         links: null,
         meta: ''
       }
