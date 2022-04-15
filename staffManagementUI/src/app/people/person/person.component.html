@@ -53,30 +53,32 @@
         <div class="person-dialog-form-content">
 
           <mat-form-field color="primary">
-            <mat-label>{{'person.gender' | translate}}</mat-label>
-            <mat-select formControlName="genderId">
-              <mat-option *ngFor="let gender of availableGenders" [value]="gender.value">
-                {{gender.viewValue}}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-
-          <mat-form-field color="primary">
-            <mat-label>{{'person.maritalStatus' | translate}}</mat-label>
-            <mat-select formControlName="maritalStatusId">
-              <mat-option *ngFor="let maritalStatus of availableMaritalStatuses" [value]="maritalStatus.value">
-                {{maritalStatus.viewValue}}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-
-          <mat-form-field color="primary">
-            <input formControlName="numberOfDependants" matInput placeholder="{{'person.numberOfDependants' | translate}}">
-          </mat-form-field>
-
-          <mat-form-field color="primary">
             <input formControlName="phoneNumber" matInput placeholder="{{'person.telephoneNumber' | translate}}">
           </mat-form-field>
+
+<!--          <mat-form-field color="primary">-->
+<!--            <input formControlName="allowedSpecialShift" matInput placeholder="{{'person.allowedSpecialShift' | translate}}">-->
+<!--          </mat-form-field>-->
+
+          <div class="add-bottom-padding">
+            <mat-checkbox formControlName="allowedSpecialShift"><span>{{'person.allowedSpecialShift' | translate}}</span></mat-checkbox>
+          </div>
+
+<!--          <mat-form-field color="primary">-->
+<!--            <input formControlName="allowedOnCall" matInput placeholder="{{'person.allowedOnCall' | translate}}">-->
+<!--          </mat-form-field>-->
+
+          <div class="add-bottom-padding">
+            <mat-checkbox formControlName="allowedOnCall"><span>{{'person.allowedOnCall' | translate}}</span></mat-checkbox>
+          </div>
+
+<!--          <mat-form-field color="primary">-->
+<!--            <input formControlName="fullyTrained" matInput placeholder="{{'person.fullyTrained' | translate}}">-->
+<!--          </mat-form-field>-->
+
+          <div class="add-bottom-padding">
+            <mat-checkbox formControlName="fullyTrained"><span>{{'person.fullyTrained' | translate}}</span></mat-checkbox>
+          </div>
 
         </div>
       </div>

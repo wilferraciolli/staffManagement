@@ -75,11 +75,14 @@
     "form": {
       "updatePerson": "Modify person"
     },
-    "firstName": "First name",
-    "lastName": "Last name",
+    "allowedSpecialShift": "Allowed special shifts",
+    "allowedOnCall": "Allowed to be on call",
     "dateOfBirth": "Date of birth",
     "email": "Email",
+    "firstName": "First name",
+    "fullyTrained": "Fully trained",
     "gender": "Gender",
+    "lastName": "Last name",
     "maritalStatus": "Marital status",
     "numberOfDependants": "Number of dependants",
     "telephoneNumber": "Telephone number"

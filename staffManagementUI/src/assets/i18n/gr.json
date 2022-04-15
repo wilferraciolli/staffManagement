@@ -75,11 +75,14 @@
     "form": {
       "updatePerson": "Ενημέρωση ατόμου"
     },
-    "firstName": "Ονομα",
-    "lastName": "Επίθετο",
+    "allowedSpecialShift": "Επιτρέπονται ειδικές βάρδιες",
+    "allowedOnCall": "Επιτρέπεται η κλήση",
     "dateOfBirth": "Ημερομηνια γεννησης",
     "email": "Email",
+    "firstName": "Ονομα",
     "gender": "Γένος",
+    "fullyTrained": "Πλήρως εκπαιδευμένος",
+    "lastName": "Επίθετο",
     "maritalStatus": "οικογενειακή κατάσταση",
     "numberOfDependants": "Αριθμός Εξαρτωμένων",
     "telephoneNumber": "Αριθμός τηλεφώνου"

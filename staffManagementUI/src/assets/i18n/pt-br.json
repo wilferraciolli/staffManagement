@@ -76,11 +76,13 @@
     "form": {
       "updatePerson": "Atualizar pessoa"
     },
-    "firstName": "Nome",
-    "lastName": "Sobrenome",
+    "allowedSpecialShift": "Allowed special shifts",
+    "allowedOnCall": "Allowed to be on call",
     "dateOfBirth": "Data de nascimento",
     "email": "Email",
+    "firstName": "Nome",
     "gender": "Sexo",
+    "lastName": "Sobrenome",
     "maritalStatus": "Estado civil",
     "numberOfDependants": "Número de dependentes",
     "telephoneNumber": "Número do telefone"
