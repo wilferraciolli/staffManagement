@@ -18,6 +18,7 @@ export class HeaderComponent implements OnInit {
   isLoggedOn: boolean;
   usersAccess: boolean;
   peopleAccess: boolean;
+  shiftsAccess: boolean;
 
   availableLanguages: Array<ValueViewValue>;
 
@@ -79,17 +80,23 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['people'], dataObject);
   }
 
+  getShifts(): void {
+    const dataObject = { state: { shiftsLink: this.userProfile.links.shifts } };
+    this.router.navigate(['shifts'], dataObject);
+  }
+
   /**
    * Get the user profile for the person logged on. This can be used to work out areas access.
    */
   private getAreasAccess(): void {
-
     if (this.userProfile) {
       this.usersAccess = this.linksService.hasLink(this.userProfile.links.users);
       this.peopleAccess = this.linksService.hasLink(this.userProfile.links.people);
+      this.shiftsAccess = this.linksService.hasLink(this.userProfile.links.shifts);
     } else {
       this.usersAccess = false;
       this.peopleAccess = false;
+      this.shiftsAccess = false;
     }
   }
 

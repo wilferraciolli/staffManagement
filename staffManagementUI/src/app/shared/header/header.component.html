@@ -16,6 +16,8 @@
            (click)="getUsers()">{{'header.users' | translate}}</a>
         <a mat-button class="btn-no-hover" *ngIf="peopleAccess"
            (click)="getPeople()">{{'header.people' | translate}}</a>
+        <a mat-button class="btn-no-hover" *ngIf="shiftsAccess"
+           (click)="getShifts()">{{'header.shifts' | translate}}</a>
       </div>
 
       <div class="header-actions">
