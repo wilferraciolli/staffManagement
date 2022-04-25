@@ -23,7 +23,6 @@ import java.util.Map;
 
 import static org.springframework.http.ResponseEntity.noContent;
 
-
 @RestController
 @RequestMapping(value = "/admin/shifts", produces = MediaType.APPLICATION_JSON_VALUE)
 public class ShiftRestService extends BaseRestService {
@@ -63,7 +62,6 @@ public class ShiftRestService extends BaseRestService {
         return buildResponseOk(getJsonRootName(ShiftResource.class), resources, metaForCollectionResource, metaLinks);
     }
 
-
     @GetMapping("/{id}")
     @PreAuthorize(value = "hasRole('ROLE_ADMIN')")
     public ResponseEntity<ShiftResource> findById(@PathVariable final Long id) {
@@ -74,7 +72,6 @@ public class ShiftRestService extends BaseRestService {
 
         return buildResponseOk(getJsonRootName(ShiftResource.class), resource, metadata);
     }
-
 
     @PutMapping("/{id}")
     public ResponseEntity<ShiftResource> update(@PathVariable("id") final Long id,

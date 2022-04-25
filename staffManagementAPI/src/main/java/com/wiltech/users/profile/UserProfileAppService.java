@@ -8,6 +8,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
 
+import com.wiltech.shifts.ShiftLinkProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.Link;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -39,6 +40,21 @@ public class UserProfileAppService {
 
     @Autowired
     private UserRepository useRepository;
+
+    @Autowired
+    private ShiftLinkProvider shiftLinkProvider;
+
+    public static Collection<SimpleGrantedAuthority> getUserRoles() {
+
+        return (Collection<SimpleGrantedAuthority>) SecurityContextHolder.getContext().getAuthentication().getAuthorities();
+    }
+
+    public static boolean hasRole(final String roleName) {
+
+        return SecurityContextHolder.getContext().getAuthentication().getAuthorities()
+                .stream()
+                .anyMatch(grantedAuthority -> grantedAuthority.getAuthority().equals(roleName));
+    }
 
     /**
      * Gets user profile.
@@ -80,6 +96,7 @@ public class UserProfileAppService {
             linksToAdd.add(linkTo(UserRestService.class).withRel("users"));
             linksToAdd.add(linkTo(PersonRestService.class).withRel("people"));
             linksToAdd.add(linkTo(methodOn(PersonRestService.class).findById(userDetailsView.getPersonId())).withRel("person"));
+            linksToAdd.add(shiftLinkProvider.generateGetAllLink());
         } else if (userDetailsView.getId().equals(this.getUserId())) {
             // add owner links
             linksToAdd.add(linkTo(methodOn(PersonRestService.class).findById(userDetailsView.getPersonId())).withRel("person"));
@@ -106,18 +123,6 @@ public class UserProfileAppService {
         return this.useRepository.findByUsername(username)
                 .map(User::getId)
                 .orElseThrow(() -> new EntityNotFoundException("could not find user for given id"));
-    }
-
-    public static Collection<SimpleGrantedAuthority> getUserRoles() {
-
-        return (Collection<SimpleGrantedAuthority>) SecurityContextHolder.getContext().getAuthentication().getAuthorities();
-    }
-
-    public static boolean hasRole(final String roleName) {
-
-        return SecurityContextHolder.getContext().getAuthentication().getAuthorities()
-                .stream()
-                .anyMatch(grantedAuthority -> grantedAuthority.getAuthority().equals(roleName));
     }
 
 }
