@@ -13,6 +13,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.time.LocalTime;
 
 /**
@@ -30,8 +31,11 @@ public class Shift {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotNull
+    private Long scheduleId;
+
     @NotEmpty
-    private String name;
+    private String title;
 
     @NotEmpty
     private String description;
@@ -39,16 +43,21 @@ public class Shift {
     @Enumerated(EnumType.STRING)
     private ShiftType shiftType;
 
+    @NotNull
     private Boolean supervisorOnly;
 
+    @NotNull
+    private Boolean active;
+
+    @NotNull
     private LocalTime startTime;
 
+    @NotNull
     private LocalTime endTime;
-
 
     public void update(final String name, final String description, final ShiftType shiftType,
                        final boolean supervisorOnly, final LocalTime startTime, final LocalTime endTime) {
-        this.name = name;
+        this.title = name;
         this.description = description;
         this.shiftType = shiftType;
         this.supervisorOnly = supervisorOnly;

@@ -15,10 +15,12 @@ public class ShiftResourceAssembler {
 
     public Shift convertToEntity(final ShiftResource payload) {
         return Shift.builder()
-                .name(payload.getName())
+                .title(payload.getTitle())
+                .scheduleId(payload.getScheduleId())
                 .description(payload.getDescription())
                 .shiftType(payload.getShiftType())
                 .supervisorOnly(payload.getSupervisorOnly())
+                .active(payload.getActive())
                 .startTime(payload.getStartTime())
                 .endTime(payload.getEndTime())
                 .build();
@@ -29,10 +31,12 @@ public class ShiftResourceAssembler {
 
         ShiftResource resource = ShiftResource.builder()
                 .id(entity.getId())
-                .name(entity.getName())
+                .scheduleId(entity.getScheduleId())
+                .title(entity.getTitle())
                 .description(entity.getDescription())
                 .shiftType(entity.getShiftType())
                 .supervisorOnly(entity.getSupervisorOnly())
+                .active((entity.getActive()))
                 .startTime(entity.getStartTime())
                 .endTime(entity.getEndTime())
                 .build();

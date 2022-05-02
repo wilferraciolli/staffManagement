@@ -32,10 +32,12 @@ public class ShiftAppService {
     public ShiftResource createTemplate() {
 
         return ShiftResource.builder()
-                .name("")
+                .title("")
+                .scheduleId(null)
                 .description("")
                 .shiftType(ShiftType.HALF_DAY)
                 .supervisorOnly(false)
+                .active(true)
                 .startTime(null)
                 .endTime(null)
                 .build();
@@ -51,7 +53,7 @@ public class ShiftAppService {
 
     public List<ShiftResource> findAll() {
 
-        return repository.findAll().stream()
+        return repository.findAllByOrderByScheduleIdAscStartTimeAsc().stream()
                 .map(assembler::convertToDTO)
                 .collect(Collectors.toList());
     }
@@ -68,7 +70,7 @@ public class ShiftAppService {
         final Shift person = repository.findById(id)
                 .orElseThrow(()  -> new EntityNotFoundException("Could not find entity for given id"));
 
-        person.update(shiftResource.getName(), shiftResource.getDescription(), shiftResource.getShiftType(), shiftResource.getSupervisorOnly(), shiftResource.getStartTime(), shiftResource.getEndTime());
+        person.update(shiftResource.getTitle(), shiftResource.getDescription(), shiftResource.getShiftType(), shiftResource.getSupervisorOnly(), shiftResource.getStartTime(), shiftResource.getEndTime());
         repository.save(person);
 
         return assembler.convertToDTO(person);

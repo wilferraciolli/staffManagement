@@ -58,9 +58,11 @@ public class ShiftResource  extends BaseDTO {
 
     private Long id;
 
-    @NotNull
-    @Size(max = 80, message = "Name cannot have more than {max} characters")
-    private String name;
+    private Long scheduleId;
+
+    @NotEmpty(message = "title cannot be blank")
+    @Size(max = 80, message = "Title cannot have more than {max} characters")
+    private String title;
 
     @NotNull
     @Size(max = 255, message = "Description cannot have more than {max} characters")
@@ -71,6 +73,8 @@ public class ShiftResource  extends BaseDTO {
 
     @NotNull
     private Boolean supervisorOnly;
+
+    private Boolean active;
 
     @NotNull
     @JsonFormat(pattern = "HH:mm")
