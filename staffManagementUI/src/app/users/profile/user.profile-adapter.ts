@@ -1,8 +1,6 @@
-import {UserProfileLinks} from './user.profile-links';
-import {UserProfileResponse} from './user.profile.response';
-import {Adapter} from '../../shared/response/adapter';
-import {UserProfile} from './user.profile';
-import {Injectable} from '@angular/core';
+import { Adapter } from '../../shared/response/adapter';
+import { UserProfile } from './user.profile';
+import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'

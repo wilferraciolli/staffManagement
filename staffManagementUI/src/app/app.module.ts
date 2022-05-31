@@ -26,6 +26,7 @@ import { UserSettingsComponent } from './users/user-details/user-settings/user-s
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { SharedModule } from './shared/shared.module';
+import { ShiftComponent } from './shifts/shift/shift.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { SharedModule } from './shared/shared.module';
     UserDetailsComponent,
     UserProfileComponent,
     UserSettingsComponent,
-    WrapperComponent
+    WrapperComponent,
+    ShiftComponent
   ],
   imports: [
     AppRoutingModule,

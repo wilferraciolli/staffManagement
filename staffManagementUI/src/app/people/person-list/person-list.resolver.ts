@@ -23,7 +23,6 @@ export class PersonListResolver implements Resolve<Observable<PeopleResponse>> {
 
     this.loadingService.loadingOn();
 
-
     this.profileService.currentUserProfile
       .subscribe(user => {
         this.userProfile = user;

@@ -54,7 +54,7 @@ import static org.springframework.http.ResponseEntity.noContent;
 @Getter
 @EqualsAndHashCode
 @ToString
-public class ShiftResource  extends BaseDTO {
+public class ShiftResource extends BaseDTO {
 
     private Long id;
 

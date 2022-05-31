@@ -1,1 +1,14 @@
-<p>shift works!</p>
+<div class="container">
+  <mat-toolbar>
+    <h2>{{'shift.title' | translate}}</h2>
+  </mat-toolbar>
+
+  <div class="shift-list-content">
+    <mat-card class="shift-list-content-card" *ngFor="let shift of shifts">
+      <span> {{shift.title}} </span>
+      <span> {{shift.description}}</span>
+      <span> {{shift.startTime}} - {{shift.endTime}}</span>
+    </mat-card>
+  </div>
+
+</div>

@@ -9,6 +9,7 @@
     "users": "Users",
     "people": "People",
     "register": "Register",
+    "shifts": "Shifts",
     "login": "Login",
     "logOut": "Log out"
   },
@@ -86,5 +87,9 @@
     "maritalStatus": "Marital status",
     "numberOfDependants": "Number of dependants",
     "telephoneNumber": "Telephone number"
+  },
+  "shift": {
+    "title": "Shifts",
+    "add": "Create shift"
   }
 }

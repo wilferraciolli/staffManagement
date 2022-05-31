@@ -18,6 +18,9 @@ export interface UserProfileResponse {
         },
         person: {
           href: string
+        },
+        shifts: {
+          href: string
         }
       };
     }

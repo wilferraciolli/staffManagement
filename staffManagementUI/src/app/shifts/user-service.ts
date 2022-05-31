@@ -4,6 +4,6 @@ import { HttpBaseService } from '../shared/response/base-service';
 @Injectable({
   providedIn: 'root'
 })
-export class UserServiceService extends HttpBaseService {
+export class ShiftServiceService extends HttpBaseService {
 
 }

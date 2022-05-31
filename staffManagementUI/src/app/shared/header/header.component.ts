@@ -72,6 +72,7 @@ export class HeaderComponent implements OnInit {
 
   getUsers(): void {
     const dataObject = { state: { usersLink: this.userProfile.links.users } };
+    console.log('Links on profile', dataObject);
     this.router.navigate(['users'], dataObject);
   }
 
@@ -81,7 +82,10 @@ export class HeaderComponent implements OnInit {
   }
 
   getShifts(): void {
+    // console.log('Links on profile', this.userProfile.links);
+    // console.log('Shifts links on profile', this.userProfile.links.shifts);
     const dataObject = { state: { shiftsLink: this.userProfile.links.shifts } };
+    console.log('Links on profile', dataObject);
     this.router.navigate(['shifts'], dataObject);
   }
 
